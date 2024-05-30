@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/squid/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/squid/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   gruvbox = {
     config = { "\27LJ\2\n­\1\0\0\3\0\5\0\r6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\1K\0\1\0\24colorscheme gruvbox9autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE%let g:gruvbox_transparent_bg = 1\bcmd\bvim\0" },
     loaded = true,
