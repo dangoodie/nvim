@@ -12,7 +12,12 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use { 'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+    use { 'morhetz/gruvbox', config = function()
+        vim.cmd("let g:gruvbox_transparent_bg = 1")
+        vim.cmd("autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE")
+        vim.cmd("colorscheme gruvbox")
+    end
+    }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -24,6 +29,7 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
+    use('jiangmiao/auto-pairs')
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
